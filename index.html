@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Coffee Adventures | Wild Coast Eastern Cape</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🏞️ Wild Coffee Adventures</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#quote">Request Quote</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Discover The Wild Coast</h1>
+            <p>Fishing Tours • River Cruises • Accommodation • Village Tours • Spiritual Journeys • Family Holidays • Horse Riding • Guided Hikes</p>
+            <div class="hero-buttons">
+                <a href="#quote" class="btn btn-primary">Request A Quote</a>
+                <a href="https://wa.me/27644359315" class="btn btn-secondary">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities">
+        <div class="container">
+            <h2>Our Adventures</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">🎣</div>
+                    <h3>Fishing Tours</h3>
+                    <p>Experience world-class Wild Coast rock and surf fishing with expert guides.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">🚤</div>
+                    <h3>River Cruises</h3>
+                    <p>Relax and enjoy scenic river adventures through breathtaking landscapes.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">🏠</div>
+                    <h3>Accommodation</h3>
+                    <p>Comfortable stays with stunning views near Hole in the Wall.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">👥</div>
+                    <h3>Village Tours</h3>
+                    <p>Explore local culture and traditions with authentic experiences.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">🧘</div>
+                    <h3>Spiritual Journeys</h3>
+                    <p>Reconnect with nature and discover local heritage and wisdom.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Holidays</h3>
+                    <p>Perfect adventures for all ages with activities everyone enjoys.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">🐴</div>
+                    <h3>Horse Riding</h3>
+                    <p>Ride along spectacular beaches and rolling hills at sunset.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">🥾</div>
+                    <h3>Guided Hikes</h3>
+                    <p>Discover hidden gems and stunning viewpoints of the Wild Coast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Wild Coast Gallery</h2>
+            <p class="gallery-subtitle">Upload your images to the /images folder and they will appear here</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/fishing.jpg" alt="Fishing Tour" loading="lazy">
+                    <div class="gallery-caption">Fishing Tours</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/wildcoast.jpg" alt="Wild Coast" loading="lazy">
+                    <div class="gallery-caption">Wild Coast Scenery</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/holeinthewall.jpg" alt="Hole in the Wall" loading="lazy">
+                    <div class="gallery-caption">Hole in the Wall</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/accommodation.jpg" alt="Accommodation" loading="lazy">
+                    <div class="gallery-caption">Accommodation</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/horseriding.jpg" alt="Horse Riding" loading="lazy">
+                    <div class="gallery-caption">Horse Riding</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sunset.jpg" alt="Sunset" loading="lazy">
+                    <div class="gallery-caption">Stunning Sunsets</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Request Section -->
+    <section id="quote" class="quote-section">
+        <div class="container">
+            <h2>Request A Quote</h2>
+            <form action="https://formsubmit.co/wildcoffeeadvent@gmail.com" method="POST" class="quote-form">
+                <input type="hidden" name="_cc" value="gerberschalk94@gmail.com">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-row">
+                    <input type="text" name="Full Name" placeholder="Full Name" required>
+                    <input type="email" name="Email" placeholder="Email Address" required>
+                </div>
+                
+                <div class="form-row">
+                    <input type="tel" name="Phone" placeholder="Phone Number" required>
+                    <input type="number" name="People" placeholder="Number of People" required>
+                </div>
+                
+                <div class="form-row">
+                    <input type="number" name="Days" placeholder="Number of Days" required>
+                    <select name="Transportation" required>
+                        <option value="">Transportation Required?</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <input type="date" name="Arrival Date" required>
+                    <input type="date" name="Departure Date" required>
+                </div>
+                
+                <select name="Activity" required>
+                    <option value="">Select Activity</option>
+                    <option value="Fishing Tour">Fishing Tour</option>
+                    <option value="River Cruise">River Cruise</option>
+                    <option value="Accommodation">Accommodation</option>
+                    <option value="Village Tour">Village Tour</option>
+                    <option value="Spiritual Journey">Spiritual Journey</option>
+                    <option value="Family Holiday">Family Holiday</option>
+                    <option value="Horse Riding">Horse Riding</option>
+                    <option value="Guided Hike">Guided Hike</option>
+                </select>
+                
+                <textarea name="Additional Information" rows="5" placeholder="Tell us more about your trip..."></textarea>
+                
+                <button type="submit" class="btn btn-primary">Request Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Wild Coffee Adventures</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 Phone & WhatsApp</h3>
+                    <p><a href="tel:+27644359315">+27 64 435 9315</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:wildcoffeeadvent@gmail.com">wildcoffeeadvent@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📍 Location</h3>
+                    <p>Hole in the Wall, Coffee Bay<br>Wild Coast, Eastern Cape<br>South Africa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Wild Coffee Adventures</h3>
+            <p>Adventure • Culture • Conservation</p>
+            <p>&copy; 2026 Wild Coffee Adventures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/27644359315" class="whatsapp-btn" target="_blank">
+        💬 WhatsApp
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
