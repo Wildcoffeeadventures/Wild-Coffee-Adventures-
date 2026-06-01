@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard | Wild Coast Weather</title>
+    <link rel="stylesheet" href="weather-styles.css">
+</head>
+<body>
+    <div class="weather-container">
+        <!-- Header -->
+        <header class="weather-header">
+            <div class="header-content">
+                <h1>🌤️ Wild Coast Weather Dashboard</h1>
+                <p>Real-time weather updates for your adventures</p>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search city or use current location..."
+                    class="search-input"
+                >
+                <button onclick="searchWeather()" class="btn btn-search">🔍 Search</button>
+                <button onclick="getCurrentLocation()" class="btn btn-location">📍 My Location</button>
+            </div>
+            <div id="loadingSpinner" class="spinner" style="display:none;"></div>
+        </section>
+
+        <!-- Main Weather Display -->
+        <section class="main-weather" id="mainWeather" style="display:none;">
+            <div class="weather-card">
+                <div class="city-info">
+                    <h2 id="cityName">Loading...</h2>
+                    <p id="dateTime"></p>
+                </div>
+
+                <div class="current-weather">
+                    <div class="temperature-section">
+                        <img id="weatherIcon" src="" alt="Weather" class="weather-icon-large">
+                        <div class="temp-display">
+                            <span id="temperature" class="temperature">--°</span>
+                            <span id="weatherDescription" class="description">Loading...</span>
+                        </div>
+                    </div>
+
+                    <div class="feels-like">
+                        <p>Feels like <span id="feelsLike">--°</span></p>
+                    </div>
+                </div>
+
+                <!-- Weather Details Grid -->
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <div class="detail-icon">💧</div>
+                        <div class="detail-info">
+                            <p class="detail-label">Humidity</p>
+                            <p id="humidity" class="detail-value">--%</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">💨</div>
+                        <div class="detail-info">
+                            <p class="detail-label">Wind Speed</p>
+                            <p id="windSpeed" class="detail-value">-- km/h</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">🌀</div>
+                        <div class="detail-info">
+                            <p class="detail-label">Pressure</p>
+                            <p id="pressure" class="detail-value">-- hPa</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">👁️</div>
+                        <div class="detail-info">
+                            <p class="detail-label">Visibility</p>
+                            <p id="visibility" class="detail-value">-- km</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">☁️</div>
+                        <div class="detail-info">
+                            <p class="detail-label">Cloudiness</p>
+                            <p id="clouds" class="detail-value">--%</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">🌅</div>
+                        <div class="detail-info">
+                            <p class="detail-label">UV Index</p>
+                            <p id="uvIndex" class="detail-value">--</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sunrise/Sunset -->
+                <div class="sun-times">
+                    <div class="sun-time">
+                        <span class="sun-label">🌅 Sunrise</span>
+                        <span id="sunrise" class="sun-value">--:--</span>
+                    </div>
+                    <div class="sun-time">
+                        <span class="sun-label">🌇 Sunset</span>
+                        <span id="sunset" class="sun-value">--:--</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forecast Section -->
+        <section class="forecast-section" id="forecastSection" style="display:none;">
+            <h2>5-Day Forecast</h2>
+            <div class="forecast-grid" id="forecastGrid">
+                <!-- Forecast cards will be populated here -->
+            </div>
+        </section>
+
+        <!-- Alerts Section -->
+        <section class="alerts-section" id="alertsSection" style="display:none;">
+            <h2>⚠️ Weather Alerts</h2>
+            <div id="alertsList" class="alerts-list"></div>
+        </section>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message" style="display:none;"></div>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <div class="info-box">
+                <h3>ℹ️ Tips for Wild Coast Adventures</h3>
+                <ul>
+                    <li>🎣 Best fishing conditions: Wind speed < 15 km/h, clear skies</li>
+                    <li>🐴 Horse riding: Avoid strong winds and heavy rain</li>
+                    <li>🥾 Hiking: Check sunrise/sunset times for safe daylight hours</li>
+                    <li>🚤 River cruises: Safe when visibility > 5 km</li>
+                    <li>🧘 Spiritual journeys: Best in calm, clear conditions</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="weather-footer">
+            <p>Powered by OpenWeatherMap API | Last updated: <span id="lastUpdated">--:--:--</span></p>
+            <p>Perfect your Wild Coast adventure with accurate weather data 🌊</p>
+        </footer>
+    </div>
+
+    <script src="weather-script.js"></script>
+</body>
+</html>
